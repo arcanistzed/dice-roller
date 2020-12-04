@@ -1,2 +1,2 @@
 # dice-roller
-A google sheets add-ons that sends dice rolls to a discord webhook.
+Roll dice on your google sheets character sheet and send the result to your discord server.

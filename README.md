@@ -1,2 +1,4 @@
 # dice-roller
-Roll dice on your google sheets character sheet and send the result to your discord server.
+An easy-to-use google sheets Add-on that lets you roll dice on your character sheet and send the result to your discord server.
+
+Visit https://waterlava.github.io/dice-roller/ for more info.

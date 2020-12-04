@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
-source: index.md
+source: dice-roller/index.md
 title: Dice Roller
 description: An easy-to-use google sheets add-on that lets you roll dice on your character sheet and send the result to your discord server.

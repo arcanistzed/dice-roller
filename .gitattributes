@@ -1,0 +1,7 @@
+# exclude .gitignore and similar
+.git*           export-ignore
+
+# exclude pages files
+.github/        export-ignore
+_config.yml     export-ignore
+index.md        export-ignore

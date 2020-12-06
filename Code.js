@@ -1,3 +1,34 @@
+//create menu items
+function onOpen(e) {
+  SpreadsheetApp.getUi()
+      .createAddonMenu()
+      .addItem('Show sidebar', 'showSidebar')
+      .addItem('Show dialog', 'showDialog')
+      .addToUi();
+}
+
+//make sure that onOpen is completed on install
+function onInstall(e) {
+  onOpen(e);
+}
+
+//Open the sidebar
+function showSidebar() {
+  var ui = HtmlService.createTemplateFromFile('Sidebar')
+      .evaluate()
+      .setTitle("Dice Roller");
+  SpreadsheetApp.getUi().showSidebar(ui);
+}
+
+//open the dialog
+function showDialog() {
+  var ui = HtmlService.createTemplateFromFile('Dialog')
+      .evaluate()
+      .setWidth(400)
+      .setHeight(190);
+  SpreadsheetApp.getUi().showModalDialog(ui, "Dice Roller");
+}
+
 function RollDice(size, pic, mod) {
   //generate random number
   var roll = Math.floor(Math.random() * size) + 1 + parseInt(mod)
@@ -173,7 +204,7 @@ function rollDamage(user) {
 
 function postMessageToDiscord(payload) {
   var discordUrl = PropertiesService.getScriptProperties().getProperty('DISCORD_WEBHOOK');
-  UrlFetchApp.fetch(discordUrl, payload);
+~  UrlFetchApp.fetch(discordUrl, payload);
 }
 
 function getUser() {

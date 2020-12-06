@@ -172,7 +172,7 @@ function rollDamage(user) {
 }
 
 function postMessageToDiscord(payload) {
-  var discordUrl = 'https://discord.com/api/webhooks/778091033619595354/Zdw6fkAw6IadjonYtvv9C8QnT3_61Qe9JdtZcv7hH3eqbVRF0NIKOAqbt-NTjN06mDU3';
+  var discordUrl = PropertiesService.getScriptProperties().getProperty('DISCORD_WEBHOOK');
   UrlFetchApp.fetch(discordUrl, payload);
 }
 

@@ -127,8 +127,9 @@ function rolld20(active, user) { //roll a d20 with mod
   
 function rollDamage(user) {
   var s = SpreadsheetApp.getActiveSheet()
-  var activeRow = s.getActiveCell().getRow()
+  var activeRow = s.getActiveCell().getRow() //get the currently active row
   
+  //get info about selected weapon
   var name = s.getRange(activeRow, 43).getDisplayValue()
   var formula = s.getRange(activeRow, 44).getDisplayValue()
   var damageType = s.getRange(activeRow, 45).getDisplayValue()
@@ -136,26 +137,14 @@ function rollDamage(user) {
   var desc = s.getRange(activeRow, 53).getDisplayValue()
   var mod = 0
     
-  var diceSize
   var result = 0 
-  var pic
+  var pic = setPicture(attackType)
   
-  //set picture
-  if (attackType === "Spell") {
-    pic = 'https://images.vexels.com/media/users/3/211391/isolated/preview/2af92aec47b1fa4289a190c5fa7ad94c-magic-spell-book-icon-by-vexels.png'
-  } else if (attackType === "Ranged") {
-    pic = 'https://cdn.pixabay.com/photo/2020/02/18/05/01/bow-4858463_1280.png'
-  } else {
-    pic = 'https://webstockreview.net/images/clipart-sword-vector-1.png' 
-  } 
-  
-  if (s.getRange(activeRow, 42) === '◉') {
-    mod = s.getRange(activeRow, 55).getDisplayValue()
-  }
+  getModifier(name, activeRow);  
   
   if (formula.indexOf('d') + 1) { //is there a dice to roll
     var numberDice = formula.substring(0, formula.indexOf('d')); 
-    diceSize = formula.substring(formula.indexOf('d') + 1);
+    var diceSize = formula.substring(formula.indexOf('d') + 1);
     
     //roll the dice
     for (i = 0; i < numberDice; i++) {
@@ -198,9 +187,41 @@ function rollDamage(user) {
 
 function postMessageToDiscord(payload) {
   var discordUrl = PropertiesService.getScriptProperties().getProperty('DISCORD_WEBHOOK');
-~  UrlFetchApp.fetch(discordUrl, payload);
+  UrlFetchApp.fetch(discordUrl, payload);
 }
 
 function getUser() {
-  return SpreadsheetApp.getActiveSheet().getRange('AE5').getValue()
+  return SpreadsheetApp.getActiveSpreadsheet().getSheetByName('v2.1').getRange('AE5').getValue()
+}
+
+function setPicture(attackType) {
+  var pic
+
+  if (attackType === "Spell") {
+    pic = 'https://images.vexels.com/media/users/3/211391/isolated/preview/2af92aec47b1fa4289a190c5fa7ad94c-magic-spell-book-icon-by-vexels.png'
+  } else if (attackType === "Ranged") {
+    pic = 'https://cdn.pixabay.com/photo/2020/02/18/05/01/bow-4858463_1280.png'
+  } else {
+    pic = 'https://webstockreview.net/images/clipart-sword-vector-1.png' 
+  } 
+  return pic
+}
+
+function getModifier(searchFor, activeRow) {
+  //Search for the weapon in Attack Info and find which row it's on
+  var lastRow = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Attack Info').getLastRow()
+  var arrayToSearch = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Attack Info').getRange(7, 2, lastRow, 39).getValues()
+
+  for(i = 0; i < arrayToSearch.length; i++){
+    if (arrayToSearch[i][0] == searchFor){
+      break
+    }
+  }
+
+  Browser.msgBox(arrayToSearch[i][38]);
+
+  //return the modifier if we are supposed to add it to the attack
+  if (arrayToSearch[i][38] === '◉') {
+    return SpreadsheetApp.getActiveSheet.getRange(activeRow, 55).getDisplayValue()
+  }
 }

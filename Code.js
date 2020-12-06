@@ -1,10 +1,13 @@
-//create menu items
 function onOpen(e) {
+  
+  //create menu items
   SpreadsheetApp.getUi()
       .createAddonMenu()
-      .addItem('Show sidebar', 'showSidebar')
-      .addItem('Show dialog', 'showDialog')
+      .addItem('Start', 'openSidebar')
       .addToUi();
+  
+  //check if this is a valid sheet
+  
 }
 
 //make sure that onOpen is completed on install
@@ -13,20 +16,11 @@ function onInstall(e) {
 }
 
 //Open the sidebar
-function showSidebar() {
+function openSidebar() {
   var ui = HtmlService.createTemplateFromFile('Sidebar')
       .evaluate()
       .setTitle("Dice Roller");
   SpreadsheetApp.getUi().showSidebar(ui);
-}
-
-//open the dialog
-function showDialog() {
-  var ui = HtmlService.createTemplateFromFile('Dialog')
-      .evaluate()
-      .setWidth(400)
-      .setHeight(190);
-  SpreadsheetApp.getUi().showModalDialog(ui, "Dice Roller");
 }
 
 function RollDice(size, pic, mod) {

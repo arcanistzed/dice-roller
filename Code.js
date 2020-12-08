@@ -54,31 +54,31 @@ function RollDice(size, pic, mod) {
 };
 
 function d4(){
-  RollDice(4, 'https://i.imgur.com/3ddlkjE.png', 0)
+  RollDice(4, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d4.svg', 0)
 }
 
 function d6(){
-  RollDice(6, 'https://i.imgur.com/RYR5pEn.png', 0)
+  RollDice(6, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d6.svg', 0)
 }
 
 function d8(){
-  RollDice(8, 'https://i.imgur.com/YFZxpbp.png', 0)
+  RollDice(8, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d8.svg', 0)
 }
 
 function d10(){
-  RollDice(10, 'https://i.imgur.com/TiccOq2.png', 0)
+  RollDice(10, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d10.svg', 0)
 }
 
 function d12(){
-  RollDice(12, 'https://i.imgur.com/gDLc7I4.png', 0)
+  RollDice(12, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d12.svg', 0)
 }
 
 function d20(){
-  RollDice(20, 'https://i.imgur.com/8DZXfoR.png', 0)
+  RollDice(20, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d20.svg', 0)
 }
 
 function d100(){
-  RollDice(100, 'https://i.imgur.com/CU1raT4.png', 0)
+  RollDice(100, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d100.svg', 0)
 }
 
 function Roll(){

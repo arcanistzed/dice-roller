@@ -1,13 +1,16 @@
 function onOpen(e) {
+  var s = SpreadsheetApp
+  var ui = s.getUi()
+  
   //create menu items
-  SpreadsheetApp.getUi()
+  ui
       .createAddonMenu()
       .addItem('Start', 'openSidebar')
       .addToUi();
   
   //check if this is a valid sheet
   if (SpreadsheetApp.getActiveSpreadsheet().getSheetByName('v2.1').getRange('AQ4').getValue() != "2.1") {
-    Browser.msgbox("Please make sure you are using GSheet v2.1")
+    ui.alert("Please make sure you are using GSheet v2.1")
   }
 }
 

@@ -1,6 +1,6 @@
-## Welcome to dice roller
+# Welcome to dice roller
 
-Dice roller is an easy-to-use Google Sheets Add-on that integrates with Discord. It can send roles from your Google Sheets 5th edition D&D character sheet directly to your discord server.
+Dice roller is an easy-to-use Google Sheets Add-on that integrates with Discord. It can send rolls from your Google Sheets 5th edition D&D character sheet directly to your discord server.
 
 ## Installation
 
@@ -17,23 +17,26 @@ The Add-on is currently in testing. If you would like to join the testing progra
 
 Currently, the Add-on only functions with GSheet v2.1 created by [The Copper Sanctum](https://thecoppersanctum.github.io/thecoppersanctum/) available [here](https://gsheet2.avrae.io/).
 
-## Roadmap
+## Next steps
 
 These are some features that don't exist yet, but that I intend to add soon:
  - Seperate icons for each weapon type in the player's handbook
- - Support for other spreadsheet character sheets
- - Support for more complicated weapons and dice formulas with multiple dice involved
- - Support for rolling hit die
+ - Option to roll custom dice formulas and save them as "macros"
+ - Support for rolling hit die and death saves
  - Support for other bonus types like sneak attack, bless, smites, hunter's mark, etc.
  - Support for rolling with advantage/disadvantage
  
-If there's anything you want added that is not on the list or if you want to influence what new features I prioritize, you can submit a [feature request](https://github.com/waterlava/dice-roller/issues/new/choose).
+If there's anything else you want added that is not on the list or if you want to influence which features I prioritize, you can submit a [feature request](https://github.com/waterlava/dice-roller/issues/new/choose).
 
 ## Documentation
 
 Coming soon.
 
-## Terms of Service and Privacy Policy
+## Terms of Service
+
+Coming soon.
+
+## Privacy Policy
 
 Coming soon.
 

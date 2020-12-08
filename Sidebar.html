@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <style>
+    #dice {
+    border-radius: 25px;
+    width: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <cursor></cursor><div class="sidebar branding-below">
+      <p>
+         An easy-to-use google sheets add-on that lets you roll dice on your character sheet and send the result to your discord server.
+      </p>
+      
+      <!-- Dice buttons, in order -->
+      <button><img class="dice" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg"></button>
+      <button><img class="dice" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"></button>
+      
+      <div class="block form-group" id="sidebar-value-block">
+        <label for="sidebar-value">Sidebar value:</label>
+        <input id="sidebar-value" value="1">
+      </div>
+      <div class="block" id="sidebar-button-bar">
+        <button id="sidebar-pull-button">Pull</button>
+        <button id="sidebar-put-button">Put</button>
+      </div>
+      <div id="sidebar-status"></div>
+    </div>
+
+    <div class="sidebar bottom">
+      <img alt="Add-on logo" class="logo" width="25"
+          src="https://googledrive.com/host/0B0G1UdyJGrY6XzdjQWF4a1JYY1k/apps-script_2x.png">
+      <span class="gray branding-text">Dice Roller by Daniel Thorp</span>
+    </div>
+  </body>
+</html>

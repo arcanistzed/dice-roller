@@ -1,5 +1,4 @@
 function onOpen(e) {
-  
   //create menu items
   SpreadsheetApp.getUi()
       .createAddonMenu()
@@ -7,7 +6,9 @@ function onOpen(e) {
       .addToUi();
   
   //check if this is a valid sheet
-  
+  if (SpreadsheetApp.getActiveSpreadsheet().getSheetByName('v2.1').getRange('AQ4').getValue() != "2.1") {
+    Browser.msgbox("Please make sure you are using GSheet v2.1")
+  }
 }
 
 //make sure that onOpen is completed on install

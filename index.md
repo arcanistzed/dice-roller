@@ -17,7 +17,14 @@ The Add-on is currently in testing. If you would like to join the testing progra
 
 Currently, the Add-on only functions with GSheet v2.1 created by [The Copper Sanctum](https://thecoppersanctum.github.io/thecoppersanctum/) available [here](https://gsheet2.avrae.io/).
 
-## Next steps
+## Documentation
+
+Coming soon.
+
+## Getting help
+You should [submit an issue](https://github.com/waterlava/dice-roller/issues/new/choose) if you are having problems using the Add-on or you can create a pull request with your own fix to speed up the process.
+
+## Upcoming features
 
 These are some features that don't exist yet, but that I intend to add soon:
  - Seperate icons for each weapon type in the player's handbook
@@ -28,10 +35,6 @@ These are some features that don't exist yet, but that I intend to add soon:
  
 If there's anything else you want added that is not on the list or if you want to influence which features I prioritize, you can submit a [feature request](https://github.com/waterlava/dice-roller/issues/new/choose).
 
-## Documentation
-
-Coming soon.
-
 ## Terms of Service
 
 Coming soon.
@@ -40,7 +43,7 @@ Coming soon.
 
 Coming soon.
 
-### Contact me
+## Contact me
 
 You can reach me at [waternlava@gmail.com](mailto:waternlava@gmail.com).
 

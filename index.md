@@ -35,18 +35,28 @@ These are some features that don't exist yet, but that I intend to add soon:
  
 If there's anything else you want added that is not on the list or if you want to influence which features I prioritize, you can submit a [feature request](https://github.com/waterlava/dice-roller/issues/new/choose).
 
-## Terms of Service
+## Privacy policy
 
-Coming soon.
+This Privacy Policy describes how your personal information is collected and shared when you use the Dice Roller Google Sheets Editor Add-on (the "Product"), when you visit this page [https://waterlava.github.io/dice-roller](https://waterlava.github.io/dice-roller) (the “Site”), and when you visit, contribute, or use our GitHub repository at [https://github.com/waterlava/dice-roller](https://github.com/waterlava/dice-roller) (the "Repository").
 
-## Privacy Policy
+### Data we collect
+When you use our services (the Site and the Product), third parties may automatically collect some of your personal information, but we do not. There is a limited amount of data that those third parties (namely Google) transmits to us in the form of analytics. More information about those third parties can be found in the section below.
 
-Coming soon.
+### Sharing your data
 
-## Contact me
+We share your data with third parties whose services are essential to the Product and/or the Site's functioning. In order to provide this functionality, we use GitHub (for the Site and the Repository), Google (for the Product) and Discord's (for the Product) services. Their Privacy Policies can be found at [https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement,](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement) [policies.google.com/privacy](http://policies.google.com/privacy), [https://discord.com/privacy](https://discord.com/privacy).
+We do not collect data from you directly, but we are made aware of user analytics and contributions through the services described above.
 
-You can reach me at [waternlava@gmail.com](mailto:waternlava@gmail.com).
+## Terms of service
+You are held to the GNU GPL v3 license while using our products available [here](https://www.gnu.org/licenses/gpl-3.0.en.html).
+We reserve the right to suspend users from contributing to the Product's development on the Repository if they demonstrate behavior that we find abusive in any way.
+We are not liable for any mishaps that may arise through the use of our projects. Our products are provided "As-Is", with no warranty or guarantee.
+Customer support may not be always available and this project may be terminated without notice at anytime.
 
-## License
+## Changes
 
-This is under the GNU GPL v3 license. [Click here](https://www.gnu.org/licenses/gpl-3.0.en.html) for more details.
+We may update these Policies in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons. You can find out about these changes by checking our Repository periodically. We do not collect user information that would enable us to notify users of any changes.
+
+## Contact Us
+
+For more information about our Privacy Policy or Terms of Service, if you have questions, or if you would like to make a complaint, please contact me by e-mail at [waternlava@gmail.com](mailto:waternlava@gmail.com) or by submitting an issue at our Repository at [https://github.com/waterlava/dice-roller](https://github.com/waterlava/dice-roller).

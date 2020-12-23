@@ -4,10 +4,27 @@
     <base target="_top">
     <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
     <style>
-    #dice {
-    border-radius: 25px;
-    width: 10px;
+
+    .btn {
+      background-color: white;
+      color: black;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      transition: 250ms;
     }
+
+    .btn:hover {
+      transform: scale(1.05);
+      transition: 250ms;
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+        transition: 250ms;
+        background-color: #D3D3D3;
+    }
+
     </style>
   </head>
   <body>
@@ -17,8 +34,8 @@
       </p>
       
       <!-- Dice buttons, in order -->
-      <button><img class="dice" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg"></button>
-      <button><img class="dice" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"></button>
+      <button class="btn"><img style="width: 100px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg">d4</button>
+      <button class="btn"><img style="width: 100px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg">d6</button>
       
       <div class="block form-group" id="sidebar-value-block">
         <label for="sidebar-value">Sidebar value:</label>

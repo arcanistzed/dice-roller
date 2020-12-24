@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+  </head>
+  <body>
+  
+    <form>
+    
+    <label>What is your Discord Webhook URL?</label>
+    <input id="webhook-url" type="url" autofocus required placeholder="https://discord.com/api/webhooks/SERVER_ID/WEBHOOK_ID">
+    <br>
+    <input type="button" value="Save" onclick="save()">
+    
+    <script>
+    function save() {
+       var url = document.getElementById('webhook-url').innerHTML
+       google.script.run.saveSettings(url)
+       Logger.log(url)
+       google.script.host.close()
+    }
+    </script>
+    
+    </form>
+    
+  </body>
+</html>
+
+

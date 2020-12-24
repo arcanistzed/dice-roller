@@ -190,7 +190,7 @@ function rollDamage(user) {
 }
 
 function postMessageToDiscord(payload) {
-  var discordUrl = PropertiesService.getScriptProperties().getProperty('DISCORD_WEBHOOK');
+  var discordUrl = PropertiesService.getUserProperties().getProperty('DISCORD_WEBHOOK');
   UrlFetchApp.fetch(discordUrl, payload);
 }
 
@@ -228,4 +228,16 @@ function getModifier(searchFor, activeRow) {
   if (arrayToSearch[i][38] === '◉') {
     return SpreadsheetApp.getActiveSheet.getRange(activeRow, 55).getDisplayValue()
   }
+}
+
+function openSettings() {
+  var html = HtmlService.createHtmlOutputFromFile('Settings.html')
+      .setWidth(400)
+      .setHeight(75);
+  SpreadsheetApp.getUi()
+      .showModalDialog(html, 'Dice Roller Settings');
+}
+
+function saveSettings(url) {
+  Logger.log(url);
 }

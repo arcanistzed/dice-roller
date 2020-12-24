@@ -3,17 +3,18 @@
   <head>
     <base target="_top">
     <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <script src="https://kit.fontawesome.com/aed1e15307.js" crossorigin="anonymous"></script>
     <style>
 
     .btn {
       background-color: white;
       color: black;
-      padding: 10px 15px;
-      cursor: pointer;
-      font-size: 20px;
+      padding: 10px 10px 10px 10px;
+      font-size: 12px;
+      text-align: center;
+      width: 50px;
+      height: 75px;
       transition: 250ms;
-      width: 150px;
-      height: 200px;
     }
 
     .btn:hover {
@@ -23,21 +24,26 @@
 
     .btn:active {
       transform: scale(0.95);
-        transition: 250ms;
-        background-color: #D3D3D3;
+      transition: 250ms;
+    }
+    
+    button.settings {
+      position: absolute;
+      right: 10px;
+      top: 10px;
     }
 
     </style>
+    
   </head>
   <body>
     <cursor></cursor><div class="sidebar branding-below">
-      <p>
-         An easy-to-use google sheets add-on that lets you roll dice on your character sheet and send the result to your discord server.
-      </p>
-      
+    
+      <button class="settings" onclick="google.script.run.openSettings();"><i class="fas fa-cog"></i> Settings</button>
+
       <!-- Dice buttons, in order -->
-      <button class="btn"><img style="width: 100px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg">d4</button>
-      <button class="btn"><img style="width: 100px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg">d6</button>
+      <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg"><br>d4</button>
+      <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d6</button>
       
       <div class="block form-group" id="sidebar-value-block">
         <label for="sidebar-value">Sidebar value:</label>
@@ -51,9 +57,11 @@
     </div>
 
     <div class="sidebar bottom">
-      <img alt="Add-on logo" class="logo" width="25"
-          src="https://googledrive.com/host/0B0G1UdyJGrY6XzdjQWF4a1JYY1k/apps-script_2x.png">
+      <a href="http://waterlava.github.io/dice-roller" target="_blank">
+      <img alt="Add-on logo" style="vertical-align: middle" width="20"
+          src="https://raw.githubusercontent.com/waterlava/dice-roller/9541883fc5366b687b97c388cd2cb7b04eb8ba1c/Dice/logo%20-%20128.svg">
       <span class="gray branding-text">Dice Roller by Daniel Thorp</span>
+      </a>
     </div>
   </body>
 </html>

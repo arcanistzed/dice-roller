@@ -7,13 +7,15 @@
     <style>
 
     .btn {
-      background-color: white;
       color: black;
-      padding: 10px 10px 10px 10px;
+      margin: 0px;
+      margin-bottom: 10px;
+      margin-right: 5px;
       font-size: 12px;
-      text-align: center;
-      width: 50px;
-      height: 75px;
+      max-width: 75px;
+      max-height: 75px;
+      min-width: 75px;
+      min-height: 75px;
       transition: 250ms;
     }
 
@@ -42,21 +44,28 @@
       <button class="settings" onclick="google.script.run.openSettings();"><i class="fas fa-cog"></i> Settings</button>
 
       <!-- Dice buttons, in order -->
-      <div class="btn">
+      <div>
         <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg"><br>d4</button>
         <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d6</button>
+        <br>
+        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d8</button>
+        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d10</button>
+        <br>
+        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d12</button>
+        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d20</button>
+        <br>
+        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d100</button>
       </div>
-
+      
       <br>
 
       <div class="block form-group" id="formula-block">
         <label for="formula">Dice formula:</label>
         <input id="formula" value="1d20">
+        <br>
+        <button id="roll">Roll</button>
       </div>
-      <div class="block" id="sidebar-button-bar">
-        <button id="sidebar-pull-button">Pull</button>
-        <button id="sidebar-put-button">Put</button>
-      </div>
+    </div>
 
     <div class="sidebar bottom">
       <a href="http://waterlava.github.io/dice-roller" target="_blank">

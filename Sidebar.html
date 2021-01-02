@@ -4,18 +4,30 @@
     <base target="_top">
     <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
     <script src="https://kit.fontawesome.com/aed1e15307.js" crossorigin="anonymous"></script>
+    
     <style>
+    .wrapper {
+       display: flex;
+       vertical-align: top;
+       text-align: center;
+    }
 
+    .icon {    
+	   width: 25px;
+       height: 25px;
+     }
+      
     .btn {
       color: black;
       margin: 0px;
       margin-bottom: 10px;
       margin-right: 5px;
       font-size: 12px;
-      max-width: 75px;
-      max-height: 75px;
-      min-width: 75px;
-      min-height: 75px;
+      line-height: 1.25;
+      max-width: 50px;
+      max-height: 50px;
+      min-width: 50px;
+      min-height: 50px;
       transition: 250ms;
     }
 
@@ -29,35 +41,32 @@
       transition: 250ms;
     }
     
-    button.settings {
+    .corner {
       position: absolute;
       right: 10px;
-      top: 10px;
+      bottom: 10px;
+      width: 50px;
+      text-align: right;
+      line-height: 1;
     }
-
     </style>
     
   </head>
   <body>
-    <cursor></cursor><div class="sidebar branding-below">
-    
-      <button class="settings" onclick="google.script.run.openSettings();"><i class="fas fa-cog"></i> Settings</button>
+    <div class="sidebar branding-below">
 
       <!-- Dice buttons, in order -->
-      <div>
-        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg"><br>d4</button>
-        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d6</button>
-        <br>
-        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d8</button>
-        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d10</button>
-        <br>
-        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d12</button>
-        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d20</button>
-        <br>
-        <button class="btn"><img style="width: 25px" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br>d100</button>
-      </div>
+      <div class="wrapper">
+		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg"><br/>d4</button>
+        <button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br/>d6</button>
+		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d8.svg"><br/>d8</button>
+		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d10.svg"><br/>d10</button>
+		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d12.svg"><br/>d12</button>
+		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d20.svg"><br/>d20</button>
+		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d100.svg"><br/>d100</button>
+	 </div>
       
-      <br>
+      <br/>
 
       <div class="block form-group" id="formula-block">
         <label for="formula">Dice formula:</label>
@@ -67,12 +76,16 @@
       </div>
     </div>
 
+    <div class="corner">
+       <button href="http://waterlava.github.io/dice-roller" target="_blank"><i class="fas fa-info"></i> Info</button>
+       <br/><br/>
+       <button onclick="google.script.run.openSettings();"><i class="fas fa-cog"></i> Settings</button>
+    </div>
+
     <div class="sidebar bottom">
-      <a href="http://waterlava.github.io/dice-roller" target="_blank">
-      <img alt="Add-on logo" style="vertical-align: middle" width="20"
-          src="https://raw.githubusercontent.com/waterlava/dice-roller/9541883fc5366b687b97c388cd2cb7b04eb8ba1c/Dice/logo%20-%20128.svg">
+      <img alt="Add-on logo" style="vertical-align: middle" width="25"
+           src="https://raw.githubusercontent.com/waterlava/dice-roller/9541883fc5366b687b97c388cd2cb7b04eb8ba1c/Dice/logo%20-%20128.svg">
       <span class="gray branding-text">Dice Roller by Daniel Thorp</span>
-      </a>
     </div>
   </body>
 </html>

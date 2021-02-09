@@ -5,3 +5,6 @@
 .github/        export-ignore
 _config.yml     export-ignore
 index.md        export-ignore
+
+# normalize line endings to LF
+*	              text=auto

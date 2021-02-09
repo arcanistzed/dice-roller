@@ -7,7 +7,6 @@
     
     <style>
     .wrapper {
-       display: flex;
        vertical-align: top;
        text-align: center;
     }
@@ -41,14 +40,25 @@
       transition: 250ms;
     }
     
-    .corner {
-      position: absolute;
-      right: 10px;
-      bottom: 10px;
-      width: 50px;
-      text-align: right;
-      line-height: 1;
+    .bigbtn {
+      color: black;
+      font-size: 18px;
+      line-height: 1.25;
+      width: 100%;
+      height: 50px;
+      left: 50%;
+      transition: 250ms;
     }
+    
+    .bigbtn:hover {
+      transform: scale(1.05);
+      transition: 250ms;
+    }
+
+    .bigbtn:active {
+      transform: scale(0.95);
+      transition: 250ms;
+    }    
     </style>
     
   </head>
@@ -57,35 +67,41 @@
 
       <!-- Dice buttons, in order -->
       <div class="wrapper">
-		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg"><br/>d4</button>
-        <button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br/>d6</button>
-		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d8.svg"><br/>d8</button>
-		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d10.svg"><br/>d10</button>
-		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d12.svg"><br/>d12</button>
-		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d20.svg"><br/>d20</button>
-		<button class="btn"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d100.svg"><br/>d100</button>
-	 </div>
+		<button class="btn" onclick="google.script.run.d4()"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d4.svg"><br/>d4</button>
+        <button class="btn" onclick="google.script.run.d6()"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d6.svg"><br/>d6</button>
+		<button class="btn" onclick="google.script.run.d8()"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d8.svg"><br/>d8</button>
+		<button class="btn" onclick="google.script.run.d10()"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d10.svg"><br/>d10</button>
+		<button class="btn" onclick="google.script.run.d12()"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d12.svg"><br/>d12</button>
+		<button class="btn" onclick="google.script.run.d20()"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d20.svg"><br/>d20</button>
+		<button class="btn" onclick="google.script.run.d100()"><img class="icon" src="https://raw.githubusercontent.com/waterlava/dice-roller/f775e3565babbc898b00120dcac798bc78c94d46/Dice/d100.svg"><br/>d100</button>
+	  </div>
       
       <br/>
 
       <div class="block form-group" id="formula-block">
         <label for="formula">Dice formula:</label>
-        <input id="formula" value="1d20">
+        <input id="formula" value="1d20" style="width: 100%">
         <br>
-        <button id="roll">Roll</button>
+        <button onclick="google.script.run.rolz(document.getElementById('formula').value)">Roll</button>
+        <br><br>
+        <a href="https://rolz.org/">Documentation</a>
+        <br><br><br><br>
+        <button class="bigbtn" onclick="google.script.run.Roll()">Roll from Sheet</button>
       </div>
     </div>
-
-    <div class="corner">
-       <button href="http://waterlava.github.io/dice-roller" target="_blank"><i class="fas fa-info"></i> Info</button>
-       <br/><br/>
-       <button onclick="google.script.run.openSettings();"><i class="fas fa-cog"></i> Settings</button>
-    </div>
-
-    <div class="sidebar bottom">
-      <img alt="Add-on logo" style="vertical-align: middle" width="25"
-           src="https://raw.githubusercontent.com/waterlava/dice-roller/9541883fc5366b687b97c388cd2cb7b04eb8ba1c/Dice/logo%20-%20128.svg">
-      <span class="gray branding-text">Dice Roller by Daniel Thorp</span>
+    
+    <div class="sidebar bottom" style="overflow: hidden;">
+      <div style="width: 70%; float:left">
+        <a href="http://waterlava.github.io/dice-roller" target="_blank">
+          <img alt="Add-on logo" style="vertical-align: middle" width="25"
+            src="https://raw.githubusercontent.com/waterlava/dice-roller/9541883fc5366b687b97c388cd2cb7b04eb8ba1c/Dice/logo%20-%20128.svg">
+          <span class="gray branding-text">Dice Roller by Daniel Thorp</span>
+        </a>
+      </div>
+      
+      <div style="width: 30%; float:right">
+        <button onclick="google.script.run.openSettings();"><i class="fas fa-cog"></i> Settings</button>
+      </div>
     </div>
   </body>
 </html>

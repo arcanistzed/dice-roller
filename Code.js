@@ -40,48 +40,48 @@ function RollDice(size, pic, mod) {
     'contentType': 'application/json',
     // Convert the JavaScript object to a JSON string.
     'payload' : JSON.stringify(
-      {
-        "username": user,
-        "avatar_url": pic,
-        "embeds": [
-          {
-            "title": "**" + roll + "**",
-            "thumbnail": {"url": pic},
-            "description": "d" + size
-          }
-        ]
-      })
+      	{	
+          "username": user,	
+          "avatar_url": pic,	
+          "embeds": [
+            {	
+            "description": "d" + size,	
+            "title": "**" + roll + "**",	
+            "thumbnail": {"url": pic}	
+            }
+          ]	
+        })
   };
   
   postMessageToDiscord(payload)
 };
 
 function d4(){
-  RollDice(4, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d4.svg', 0)
+  RollDice(4, "https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d4.svg", 0)
 }
 
 function d6(){
-  RollDice(6, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d6.svg', 0)
+  RollDice(6, "https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d6.svg", 0)
 }
 
 function d8(){
-  RollDice(8, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d8.svg', 0)
+  RollDice(8, "https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d8.svg", 0)
 }
 
 function d10(){
-  RollDice(10, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d10.svg', 0)
+  RollDice(10, "https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d10.svg", 0)
 }
 
 function d12(){
-  RollDice(12, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d12.svg', 0)
+  RollDice(12, "https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d12.svg", 0)
 }
 
 function d20(){
-  RollDice(20, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d20.svg', 0)
+  RollDice(20, "https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d20.svg", 0)
 }
 
 function d100(){
-  RollDice(100, 'https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d100.svg', 0)
+  RollDice(100, "https://raw.githubusercontent.com/waterlava/dice-roller/d5b6ac97023471bafe48ff116b1811583cd9bc6a/Dice/d100.svg", 0)
 }
 
 function Roll(){
@@ -222,7 +222,7 @@ function getModifier(searchFor, activeRow) {
     }
   }
 
-  Browser.msgBox(arrayToSearch[i][38]);
+  //Browser.msgBox(arrayToSearch[i][38]);
 
   //return the modifier if we are supposed to add it to the attack
   if (arrayToSearch[i][38] === '◉') {
@@ -239,5 +239,40 @@ function openSettings() {
 }
 
 function saveSettings(url) {
-  Logger.log(url);
+  PropertiesService.getUserProperties().setProperty('DISCORD_WEBHOOK', url);
+}
+
+function getSettings() {
+  return PropertiesService.getUserProperties().getProperty('DISCORD_WEBHOOK');
+}
+
+function rolz(formula) {
+  Logger.log(formula);
+  var url = "https://rolz.org/api/?" + formula + ".simple"
+  var response = UrlFetchApp.fetch(url);
+  var roll = response.getContentText()
+  
+  //get the user
+  var user = getUser()
+  
+  //JSON payload
+  var payload = {
+    'method' : 'post',
+    'contentType': 'application/json',
+    // Convert the JavaScript object to a JSON string.
+    'payload' : JSON.stringify(
+      	{	
+          "username": user,	
+          "avatar_url": "https://rolz.org/img/d6-32px.png",	
+          "embeds": [
+            {	
+            "description": formula,
+            "title": "**" + roll + "**",
+            "thumbnail": {"url": "https://rolz.org/img/d6-32px.png"}	
+            }
+          ]	
+        })
+  };
+  
+  postMessageToDiscord(payload)
 }

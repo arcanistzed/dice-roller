@@ -4,7 +4,8 @@ Dice roller is an easy-to-use Google Sheets Add-on that integrates with Discord.
 
 ## Installation
 
-The Add-on is currently in testing. If you would like to join the testing program, click [here](mailto:waternlava@gmail.com?subject=Request%20to%20join%20dice%20roller%27s%20testing%20program&body=My%20email%20is:%0a%0aThanks%0a) to send me an email.
+The Add-on is currently in testing. If you would like to join the testing program to automatically recieve updates, click [here](mailto:waternlava@gmail.com?subject=Request%20to%20join%20dice%20roller%27s%20testing%20program&body=My%20email%20is:%0a%0aThanks%0a) to send me an email. Alternatively, You can copy the sheet [here](https://docs.google.com/spreadsheets/d/1jnXa8AqjGyVP4rcvOJ0121LNl-USLmsMQJzR2zeOu5w/copy) to use it.
+You need to use the button in Extensions > Dice Roller > Start to have the sidebar appear. You must put a Discord Webhook URL in the settings menu found on this sidebar.
 
 ## Features
 
@@ -13,9 +14,9 @@ The Add-on is currently in testing. If you would like to join the testing progra
  - Roll damage for a weapon or spell
  - Send the result to a discord webhook
 
-## Limitations
+## Acknowledgements
 
-Currently, the Add-on only functions with GSheet v2.1 created by [The Copper Sanctum](https://thecoppersanctum.github.io/thecoppersanctum/) available [here](https://gsheet2.avrae.io/).
+The character sheet used is the GSheet v2.1 created by [The Copper Sanctum](https://thecoppersanctum.github.io/thecoppersanctum/) available [here](https://gsheet2.avrae.io/).
 
 ## Documentation
 
@@ -24,6 +25,7 @@ Coming soon.
 ## Getting help
 You should [submit an issue](https://github.com/waterlava/dice-roller/issues/new/choose) if you are having problems using the Add-on or you can create a pull request with your own fix to speed up the process.
 
+<!--
 ## Upcoming features
 
 These are some features that don't exist yet, but that I intend to add soon:
@@ -32,8 +34,7 @@ These are some features that don't exist yet, but that I intend to add soon:
  - Support for rolling hit die and death saves
  - Support for other bonus types like sneak attack, bless, smites, hunter's mark, etc.
  - Support for rolling with advantage/disadvantage
- 
-If there's anything else you want added that is not on the list or if you want to influence which features I prioritize, you can submit a [feature request](https://github.com/waterlava/dice-roller/issues/new/choose).
+!-->
 
 ## Privacy policy
 
